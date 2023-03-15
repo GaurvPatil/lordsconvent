@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { images } from "./Data";
 
-
 function HeroBanner() {
   const [width, setWidth] = useState(0);
 
@@ -18,10 +17,10 @@ function HeroBanner() {
   }, [setWidth]);
 
   return (
-    <Carousel fade>
+    <Carousel fade controls={false}>
       {images.map((pic, index) => {
         return (
-          <Carousel.Item interval={2000} key={index}>
+          <Carousel.Item interval={2000} key={index} >
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>{pic.data}</p>

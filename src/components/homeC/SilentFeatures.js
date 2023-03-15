@@ -1,10 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import Titles from "../Titles";
-import earth from "./heroImages/bag.png";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import { silentFeaturesData } from "./Data";
 import { Container, makeStyles, Paper, Typography } from "@material-ui/core";
+import Circles from "./Circles";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,13 +18,11 @@ const useStyles = makeStyles((theme) => ({
   fetatureDiv: {
     display: "flex",
     flexDirection: "row",
-    alignItems:"center",
+    alignItems: "center",
 
     gap: "0.4rem",
     color: "white",
   },
-
-
 
   typofont: {
     fontSize: "1.2rem",
@@ -41,110 +39,10 @@ const useStyles = makeStyles((theme) => ({
 
 const SilentFeatures = () => {
   const classes = useStyles();
-  const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i) => {
-      const delay = 1 + i * 0.5;
-      return {
-        pathLength: 1,
-        opacity: 1,
-        transition: {
-          pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-          opacity: { delay, duration: 0.01 },
-        },
-      };
-    },
-  };
 
   return (
     <>
-      <Container maxWidth="md" style={{ textAlign: "center" }}>
-        <motion.svg
-          width="100"
-          height="250"
-          viewBox="0 0 600 600"
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.circle
-            cx="200"
-            cy="0"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={1}
-          />
-
-          <motion.circle
-            cx="200"
-            cy="100"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={1.5}
-          />
-
-          <motion.circle
-            cx="200"
-            cy="200"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={2}
-          />
-
-          <motion.circle
-            cx="200"
-            cy="300"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={2.5}
-          />
-
-          <motion.circle
-            cx="200"
-            cy="400"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={3}
-          />
-          <motion.circle
-            cx="200"
-            cy="500"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={3.5}
-          />
-          <motion.circle
-            cx="200"
-            cy="600"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={4}
-          />
-          <motion.circle
-            cx="200"
-            cy="700"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={4.5}
-          />
-          <motion.circle
-            cx="200"
-            cy="800"
-            r="20"
-            stroke="#ff0055"
-            variants={draw}
-            custom={4.5}
-          />
-        </motion.svg>
-      </Container>
-
+      <Circles />
       <br />
       <Paper className={classes.paper}>
         <Titles title="SILIENT FEATURES" backgr="#f7941d" typoColor="white" />
@@ -167,6 +65,8 @@ const SilentFeatures = () => {
           })}
         </Container>
       </Paper>
+
+       <Circles />
     </>
   );
 };
