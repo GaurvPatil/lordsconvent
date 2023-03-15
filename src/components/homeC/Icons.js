@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   typofont: {
     fontSize: "1.2rem",
     fontWeight:"bold",
-    color:"#000c6b",
+    color:"white",
 
     [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "0.8rem",
@@ -50,12 +50,12 @@ const useStyles = makeStyles((theme) => ({
 const Icons = () => {
   const classes = useStyles();
   return (
-    <>
+    <div style={{background:"rgb(247, 148, 29)" , padding:"2rem 0"}}>
       <Titles
         title=" 
       LORD'S CONVENT STRONG "
-        backgr="#f1f1f1"
-        typoColor="#444444"
+        backgr="#01416f"
+        typoColor="white"
       />
       <Container maxWidth="lg" className={classes.outerContainer}>
         <div className={classes.mediaDiv}>
@@ -80,7 +80,7 @@ const Icons = () => {
           </Typography>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 
