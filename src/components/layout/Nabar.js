@@ -192,6 +192,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import { useNavigate } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -208,6 +209,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
+  const navigate = useNavigate()
 
   return (
     <div className={classes.root}>
@@ -221,7 +223,10 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} 
+          onClick = {()=> navigate("/about" , {replace:true})}
+          style = {{cursor:"pointer"}}
+          >
             Photos
           </Typography>
         </Toolbar>

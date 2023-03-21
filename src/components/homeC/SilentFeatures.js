@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     gap: "2rem",
     padding: "2rem 0 ",
+    
   },
 
   fetatureDiv: {

@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     gap:"2rem",
+    padding: "4rem 0",
+    color:"white"
   },
 
   contentInnerDiv: {
@@ -28,11 +30,13 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <>
-      <footer className="new_footer_area bg_color">
-        <div className="new_footer_top">
-          <Container maxWidth="md">
+    <footer style={{background:"black"}}>
+        <Container maxWidth="sm">
             <div className={classes.contentDiv}>
+
+
+           
+
               <div className={classes.contentInnerDiv}>
                 <Typography className={classes.typofont}>
                   {" "}
@@ -61,35 +65,14 @@ const Footer = () => {
                 <Typography>
                   orem Ipsum has been the industry's standard dummy text ever
                   since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book. It has survived
-                  not only five centuries, but also the leap int
+                  and scrambled it to make a type specimen book. 
                 </Typography>
-                <div></div>
+
               </div>
+             
             </div>
           </Container>
-          <div className="footer_bg">
-            <div className="footer_bg_one"></div>
-            <div className="footer_bg_two"></div>
-          </div>
-        </div>
-
-        <div className="footer_bottom">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-sm-7">
-                <p className="mb-0 f_400">
-                  © lord's convent.. 2023 All rights reserved.
-                </p>
-                <p>
-                  (gaurvpatil17@gmail.com) <i className="icon_heart"></i>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
+    </footer>
   );
 };
 

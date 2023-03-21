@@ -22,15 +22,15 @@ const Circles = () => {
     <Container maxWidth="md" style={{ textAlign: "center" }}>
     <motion.svg
       width="100"
-      height="200"
+      height="150"
       viewBox="0 0 600 600"
       initial="hidden"
       animate="visible"
     >
       <motion.circle
         cx="200"
-        cy="0"
-        r="20"
+        cy="150"
+        r="30"
         stroke="#ff0055"
         variants={draw}
         custom={1}
@@ -38,8 +38,8 @@ const Circles = () => {
 
       <motion.circle
         cx="200"
-        cy="100"
-        r="20"
+        cy="300"
+        r="30"
         stroke="#ff0055"
         variants={draw}
         custom={1.5}
@@ -47,46 +47,14 @@ const Circles = () => {
 
       <motion.circle
         cx="200"
-        cy="200"
-        r="20"
+        cy="450"
+        r="30"
         stroke="#ff0055"
         variants={draw}
         custom={2}
       />
 
-      <motion.circle
-        cx="200"
-        cy="300"
-        r="20"
-        stroke="#ff0055"
-        variants={draw}
-        custom={2.5}
-      />
-
-      <motion.circle
-        cx="200"
-        cy="400"
-        r="20"
-        stroke="#ff0055"
-        variants={draw}
-        custom={3}
-      />
-      <motion.circle
-        cx="200"
-        cy="500"
-        r="20"
-        stroke="#ff0055"
-        variants={draw}
-        custom={3.5}
-      />
-      <motion.circle
-        cx="200"
-        cy="600"
-        r="20"
-        stroke="#ff0055"
-        variants={draw}
-        custom={4}
-      />
+     
       
     </motion.svg>
    
