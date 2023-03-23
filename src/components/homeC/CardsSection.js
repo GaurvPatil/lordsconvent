@@ -4,7 +4,6 @@ import { imgData } from "./Data";
 import Container from "@material-ui/core/Container";
 import {
   Card,
-  CardActionArea,
   CardContent,
   CardMedia,
   makeStyles,
@@ -21,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     [theme.breakpoints.between("xs", "sm")]: {
       gap: "1.5rem",
-     
     },
 
     [theme.breakpoints.between("sm", "md")]: {
@@ -42,8 +40,8 @@ const CardsSection = () => {
 
   return (
     <>
-    <br/>
-    <br/>
+      <br />
+      <br />
       <Titles
         title=" 
       EXPLORE OUR MAJORS & PROGRAMS "
@@ -54,28 +52,26 @@ const CardsSection = () => {
         <div className={classes.cardCover}>
           {imgData.map((img, index) => {
             return (
-              <Card className={classes.card} key = {index}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={img.source}
-                    alt="cover image"
-                    title="green iguana"
-                  />
+              <Card className={classes.card} key={index}>
+                <CardMedia
+                  className={classes.media}
+                  image={img.source}
+                  alt="cover image"
+                  title="green iguana"
+                />
 
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                      style={{ color: "#01416f" }}
-                    >
-                      {img.title}
-                    </Typography>
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                    style={{ color: "#01416f" }}
+                  >
+                    {img.title}
+                  </Typography>
 
-                    <Typography variant="body2">{img.description}</Typography>
-                  </CardContent>
-                </CardActionArea>
+                  <Typography variant="body2">{img.description}</Typography>
+                </CardContent>
               </Card>
             );
           })}

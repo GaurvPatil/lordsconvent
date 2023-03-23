@@ -4,6 +4,7 @@ import Titles from "../components/Titles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import Gallary from "./Gallary";
 
 const About = () => {
   return (
@@ -212,7 +213,15 @@ const About = () => {
         </div>
       </div>
 
+
+     <div style={{margin:"2rem 0"}}>
+     <Gallary />
+
+     </div>
       <Footer />
+
+      
+     
     </>
   );
 };
